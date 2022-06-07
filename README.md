@@ -1,4 +1,4 @@
-# **Project 2:** 7CupsofJava Movie Application
+# **Project 2:** BlockBusster Movie Application
 
 ## Description
 
