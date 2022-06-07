@@ -2,7 +2,9 @@
 
 ## Description
 
-BlockBuster was developed as an online home movie services that is looking to bring quality old and new movie rentals to users all across the world.
+Our BlockBuster App was developed as an online home movie services that is looking to bring quality old and new movie rentals to users all across the world. Customers 
+can search and favorite some of their most loved films from the comfort of their homes. This project includes a frontend that will be developed using ReactJs to handle
+user requests
 
 # User Stories
 
