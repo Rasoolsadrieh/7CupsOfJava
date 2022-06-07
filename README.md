@@ -31,6 +31,7 @@ BlockBuster was developed as an online home movie services that is looking to br
 -   [ ] JUnit
 -   [ ] Mockito
 -   [ ] Apache Maven
+-   [ ] Hibernate
 -   [ ] Spring 5
 -   [ ] Jackson library (for JSON marshalling/unmarshalling)
 -   [ ] Java EE Servlet API (v4.0+)
