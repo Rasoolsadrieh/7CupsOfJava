@@ -1,2 +1,2 @@
-# 7CupsOfJava
-7CupsOfJava eleVated
+# **Project 2:** 7CupsofJava Movie Application
+
