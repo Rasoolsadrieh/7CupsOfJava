@@ -2,7 +2,7 @@
 
 ## Description
 
-BlockBuster was developed as an online home movie services that is looking to bring quality old and new movies to users all across the world.
+BlockBuster was developed as an online home movie services that is looking to bring quality old and new movie rentals to users all across the world.
 
 # User Stories
 
