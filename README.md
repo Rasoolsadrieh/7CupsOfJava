@@ -27,6 +27,10 @@ user requests
 - [ ] Online Rental
 - [ ] Pick up/Delivery
 
+## Tables
+link to the table's structure document
+https://docs.google.com/document/d/1GDGMAWtaKeTs5jyoBrA__l0nNFGu01FDo3qKrQ75WiU/edit
+
 ## Tech Stack
 
 -   [ ] Java 8
