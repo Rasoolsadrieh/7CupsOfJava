@@ -1,96 +1,32 @@
 package com.revature.movieapp.customer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import javax.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
- @Entity
- @Table(name = "customer")
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "customer")
 public class Customer {
 
+    @NotBlank(message = "Hey you need a first name, it cannot be blank")
+    @NotNull
+    private String fname;
+    private String lname;
+    @Id
+    @Email(message = "please provide valid email")
+    private String email;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @Pattern(message = "Minimum eight characters, at least one letter, one number and one special character required:", regexp = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$")
+    private String password;
+    @Size(min = 10, max = 1000)
+    private String dob;
 
-
-
-     @Id
-     @Column(name = "email")
-     private String email;
-     @Column(name = "fname")
-     private String fname;
-     @Column(name = "lname")
-     private String lname;
-     @Column(name = "dob")
-     private String dob;
-     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-     @Column(name = "password")
-     private String password;
-     @Column(name = "balance")
-     private int balance;
-
-     public Customer(String email, String fname, String lname, String dob, String password, int balance) {
-         this.email = email;
-         this.fname = fname;
-         this.lname = lname;
-         this.dob = dob;
-         this.password = password;
-         this.balance = balance;
-     }
-
-     public String getEmail() {
-         return email;
-     }
-
-     public void setEmail(String email) {
-         this.email = email;
-     }
-
-     public String getFname() {
-         return fname;
-     }
-
-     public void setFname(String fname) {
-         this.fname = fname;
-     }
-
-     public String getLname() {
-         return lname;
-     }
-
-     public void setLname(String lname) {
-         this.lname = lname;
-     }
-
-     public String getDob() {
-         return dob;
-     }
-
-     public void setDob(String dob) {
-         this.dob = dob;
-     }
-
-     public String getPassword() {
-         return password;
-     }
-
-     public void setPassword(String password) {
-         this.password = password;
-     }
-
-     public int getBalance() {
-         return balance;
-     }
-
-     public void setBalance(int balance) {
-         this.balance = balance;
-     }
-
-     @Override
-     public String toString() {
-         return "Customer{" +
-                 "email='" + email + '\'' +
-                 ", fname='" + fname + '\'' +
-                 ", lname='" + lname + '\'' +
-                 ", dob='" + dob + '\'' +
-                 ", password='" + password + '\'' +
-                 ", balance=" + balance +
-                 '}';
-     }
- }
+}

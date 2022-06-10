@@ -4,149 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29b76a54-7c41-45ab-a42b-a0c4d2edf552" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_32.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlockBusster_API.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/MovieappProjectApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/favorite/Favorite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/favorite/FavoriteDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/favorite/FavoriteServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/favorite/FavoriteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/aspects/ErrorExceptionAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/aspects/LoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/exceptions/AuthenticationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/exceptions/InvalidRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/exceptions/ResourcePersistanceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/web/dto/FavoriteInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/web/dto/LoginCreds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/web/servlets/AuthServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/web/servlets/TestServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pokedex-script.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/revature/CustomerServiceTestSuite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/revature/movieapp/poke_project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/revature/movieapp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1BackEnd.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/creditcard/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/creditcard/CreditCardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/creditcard/CreditCardServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/creditcard/CreditCardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/customer/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/customer/CustomerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/customer/CustomerServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/customer/CustomerServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/customer/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/customer/CustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/menu/Menu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/menu/MenuDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/menu/MenuServices.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/menu/MenuServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/order/OrderDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/order/OrderServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/order/OrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/util/HibernateUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/util/exceptions/AuthenticationException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/util/exceptions/InvalidRequestException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/util/exceptions/ResourcePersistanceException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/util/interfaces/Authable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/interfaces/Authable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/util/interfaces/Crudable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/interfaces/Crudable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/util/interfaces/Serviceable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/interfaces/Serviceable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/util/web/dto/CreditCardInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/util/web/dto/LoginCreds.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/util/web/dto/OrderInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/util/web/servlets/AuthServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/util/web/servlets/TestServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/restaurant/util/web/util/ContextLoaderListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/revature/restaurant/util/HibernateUtilTestSuite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/creditcard/CreditCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/creditcard/CreditCardDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/creditcard/CreditCardServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/creditcard/CreditCardServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/customer/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/customer/CustomerDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/customer/CustomerServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/customer/CustomerServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/menu/Menu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/menu/MenuDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/menu/MenuServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/menu/MenuServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/order/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/order/OrderDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/order/OrderServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/order/OrderServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/util/HibernateUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/util/exceptions/AuthenticationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/util/exceptions/InvalidRequestException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/util/exceptions/ResourcePersistanceException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/util/interfaces/Authable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/util/interfaces/Crudable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/util/interfaces/Serviceable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/util/web/dto/CreditCardInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/util/web/dto/LoginCreds.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/util/web/dto/OrderInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/util/web/servlets/AuthServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/util/web/servlets/TestServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/com/revature/restaurant/util/web/util/ContextLoaderListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RossAndJerryRestaurant-1.0-SNAPSHOT/WEB-INF/classes/hibernate.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/creditcard/CreditCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/creditcard/CreditCardDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/creditcard/CreditCardServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/creditcard/CreditCardServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/customer/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/customer/CustomerDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/customer/CustomerServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/customer/CustomerServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/menu/Menu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/menu/MenuDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/menu/MenuServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/menu/MenuServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/order/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/order/OrderDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/order/OrderServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/order/OrderServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/util/HibernateUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/util/exceptions/AuthenticationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/util/exceptions/InvalidRequestException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/util/exceptions/ResourcePersistanceException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/util/interfaces/Authable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/util/interfaces/Crudable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/util/interfaces/Serviceable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/util/web/dto/CreditCardInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/util/web/dto/LoginCreds.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/util/web/dto/OrderInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/util/web/servlets/AuthServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/util/web/servlets/TestServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/restaurant/util/web/util/ContextLoaderListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="29b76a54-7c41-45ab-a42b-a0c4d2edf552" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,19 +56,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_directory_selection": "C:/movie app/movie app/src/test/java/com/revature/movieapp",
-    "last_opened_file_path": "C:/movie app/movie app",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/movie app/movie app/src/test/java/com/revature/movieapp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/movie app/movie app&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.revature.movieapp.util.web.servlets" />
@@ -232,6 +90,8 @@
       <recent name="com.revature.movieapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.revature.movieapp.util.web" />
+      <recent name="com.revature.movieapp.util.aspects" />
       <recent name="com.revature.movieapp.util.web.dto" />
       <recent name="com.revature.movieapp.test.java.com.revature.pokedex.services" />
       <recent name="com.revature.movieapp.util" />

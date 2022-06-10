@@ -3,8 +3,9 @@ package com.revature.movieapp.util.web.servlets;
 import com.revature.movieapp.customer.Customer;
 import com.revature.movieapp.util.exceptions.AuthenticationException;
 import com.revature.movieapp.util.exceptions.InvalidRequestException;
-
 import com.revature.movieapp.util.web.dto.FavoriteInitializer;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 

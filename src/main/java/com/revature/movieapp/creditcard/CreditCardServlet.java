@@ -3,11 +3,10 @@ package com.revature.movieapp.creditcard;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
-
 import javax.servlet.http.HttpServlet;
 
 @RestController
-@CrossOrigin // CORS, this handles all cors This handles EVERYTHINg ("*")
+@CrossOrigin
 public class CreditCardServlet {
 
     private final CreditCardServices creditCardServices;
@@ -17,5 +16,5 @@ public class CreditCardServlet {
         this.creditCardServices = creditCardServices;
     }
 
-    // TODO: IMPLEMENT ME
+
 }
