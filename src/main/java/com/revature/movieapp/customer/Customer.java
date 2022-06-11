@@ -28,5 +28,6 @@ public class Customer {
     private String password;
     @Size(min = 10, max = 1000)
     private String dob;
+    private int balance;
 
 }
