@@ -1,0 +1,6 @@
+.idea/
+pokedex.iml
+out/
+src/main/resources/db.properties
+target/
+src/main/resources/application.yaml
