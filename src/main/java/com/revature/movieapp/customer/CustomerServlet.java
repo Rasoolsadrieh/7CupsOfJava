@@ -1,100 +1,95 @@
 package com.revature.movieapp.customer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.revature.movieapp.util.exceptions.AuthenticationException;
+import com.revature.movieapp.util.exceptions.InvalidRequestException;
 import com.revature.movieapp.util.exceptions.ResourcePersistanceException;
 import com.revature.movieapp.util.interfaces.Authable;
+import com.revature.movieapp.util.web.SecureEndpoint;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 import java.io.IOException;
+import java.util.List;
 
-public class CustomerServlet extends HttpServlet implements Authable {
+@RestController // @Controller
+@CrossOrigin //Resource Sharing, by default it allows all "*"
+public class CustomerServlet {
 
     private final CustomerServices customerServices;
 
-    private final ObjectMapper mapper;
-
-    public CustomerServlet(CustomerServices customerServices, ObjectMapper mapper) {
+    @Autowired
+    public CustomerServlet(CustomerServices customerServices) {
         this.customerServices = customerServices;
-        this.mapper = mapper;
     }
 
-    @Override
-    protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doOptions(req, resp);
-        resp.addHeader("Access-Control-Allow-Origin", "*");
-        resp.addHeader("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
-        resp.addHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    // TODO: Implement ME
+
+    // Create
+    @PostMapping("/register")
+
+    public ResponseEntity<Customer> saveCustomer(@RequestBody @Valid Customer customer){
+        Customer newCustomer = customerServices.create(customer);
+        return new ResponseEntity<>(newCustomer, HttpStatus.CREATED);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.addHeader("Access-Control-Allow-Origin", "*");
-        resp.addHeader("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
-        resp.addHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-
-        Customer newCustomer = mapper.readValue(req.getInputStream(), Customer.class);
-        Customer persistedCustomer = customerServices.create(newCustomer);
-
-        String payload = mapper.writeValueAsString(persistedCustomer);
-        resp.getWriter().write("You have successfully registered an account at RossandJerry's Restaurant");
-        resp.getWriter().write(payload);
-        resp.setStatus(201);
+    // Read
+    @GetMapping("/customer-findall")
+    public List<Customer> getAllCustomers(){
+        return customerServices.readAll();
     }
 
-    @Override
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.addHeader("Access-Control-Allow-Origin", "*");
-        resp.addHeader("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
-        resp.addHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-
-       // if (!Authable.checkAuth(req, resp)) return;
-      //  Customer authCustomer = (Customer) req.getSession().getAttribute("authCustomer");
-        Customer updatedCustomer = mapper.readValue(req.getInputStream(), Customer.class);
-
-            Customer newCustomer = customerServices.update(updatedCustomer);
-
-            String payload = mapper.writeValueAsString(newCustomer);
-            resp.getWriter().write("You have successfully updated your customer information ");
-            resp.getWriter().write(payload);
-            resp.setStatus(201);
-
-
+    @GetMapping("/customers")
+    @SecureEndpoint(allowedUsers = {"by@mail.com", "abczyx123@mail.com"}, isLoggedIn = true)
+    public ResponseEntity<List> findAllCustomers(){
+        // ResponseEntity takes an Object for the ResponseBody and an HTTP Status Code
+        return new ResponseEntity<>customerServices.readAll(), HttpStatus.I_AM_A_TEAPOT);
     }
 
-    @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.addHeader("Access-Control-Allow-Origin", "*");
-        resp.addHeader("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
-        resp.addHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-       // if(!Authable.checkAuth(req,resp)) return;
-//        if(req.getParameter("username") == null){
-//            resp.getWriter().write("In order to delete, please provide your username as a verification into the url with ?username=username");
-//            resp.setStatus(401);
-//            return;
-//        }
-
-        String username = req.getParameter("username");
-//        Customer authCustomer = (Customer) req.getSession().getAttribute("authCustomer");
-
-//        if(!authCustomer.getUsername().equals(username)){
-//            resp.getWriter().write("Username provided does not match the user logged in, double check for confirmation of deletion");
-//            return;
-//        }
-
-        try {
-            customerServices.delete(username);
-            resp.getWriter().write("Deleted user from Ross and Jerry's Cuisine");
-            req.getSession().invalidate();
-        } catch (ResourcePersistanceException e){
-            resp.getWriter().write(e.getMessage());
-            resp.setStatus(404);
-        } catch (Exception e){
-            resp.getWriter().write(e.getMessage());
-            resp.setStatus(500);
-        }
+    @GetMapping("/customerEx")
+    public void customerEx(){
+        throw new AuthenticationException("Oh no customer not auth");
     }
+
+    @GetMapping("/customer/{email}")
+    @SecureEndpoint(isLoggedIn = true)
+    public ResponseEntity<Customer> findCustomerById(@PathVariable String email){
+        Customer foundCustomer = customerServices.readById(email);
+        return new ResponseEntity<>(foundCustomer, HttpStatus.OK);
+    }
+
+    @GetMapping("/customer")
+    public Customer findCustomerByIdQueryParam(@RequestParam String email){ // @RequestParam is those Query Parameters, .com/customer?email=cj@mail.com
+        Customer foundCustomer = customerServices.readById(email);
+        return foundCustomer;
+    }
+
+    @GetMapping("/data")
+    public int showDataTypeInPath(@RequestParam int x){
+        return x;
+    } // Spring will automatically convert the type based on the parameter
+
+    @GetMapping("/persEx")
+    public void throwPersEx(){
+        throw new ResourcePersistanceException("How does the handler know what message is being sent here???");
+    }
+
+    @SecureEndpoint(allowedUsers = {"by@mail.com", "abczyx123@mail.com"}, isLoggedIn = true)
+    @GetMapping("/secEnd")
+    public String secureEndpoint(){
+        return "Hey look at me from the secured endpoint";
+    }
+
+
 
 }
