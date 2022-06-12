@@ -31,7 +31,7 @@ public class AuthServlet {
 
     @PostMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void authorizeTrainer(@RequestBody LoginCreds loginCreds, HttpSession httpSession){
+    public void authorizeCustomer(@RequestBody LoginCreds loginCreds, HttpSession httpSession){
         Customer authCustomer = customerServices.authenticateCustomer(loginCreds.getEmail(), loginCreds.getPassword());
         httpSession.setAttribute("authCustomer", authCustomer);
     }
