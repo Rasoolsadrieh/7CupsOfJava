@@ -1,4 +1,4 @@
-package com.revature.movieapp.util.exceptions.aspects;
+package com.revature.movieapp.util.aspects;
 import com.revature.movieapp.customer.Customer;
 import com.revature.movieapp.util.exceptions.AuthenticationException;
 import com.revature.movieapp.util.web.SecureEndpoint;
