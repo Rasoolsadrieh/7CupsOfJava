@@ -1,5 +1,5 @@
 .idea/
-pokedex.iml
+BlockBusster_API.iml
 out/
 src/main/resources/db.properties
 target/
