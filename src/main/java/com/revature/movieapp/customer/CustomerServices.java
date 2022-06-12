@@ -75,6 +75,20 @@ public class CustomerServices implements Serviceable<Customer> {
         return persistedCustomer;
     }
 
+    public String delete(Customer deleteCustomer){
+        if(!validateInput(deleteCustomer)){ // checking if false
+            throw new InvalidRequestException("User input was not validated, either empty String or null values");
+        }
+
+        // TODO: Will implement with JDBC (connecting to our database)
+        if(!validateEmailNotUsed(deleteCustomer.getEmail())){
+            throw new InvalidRequestException("User email doesn't exist");
+        }
+        customerDao.delete(deleteCustomer);
+
+        return "The customer " + deleteCustomer.getEmail() + " has been deleted.";
+    }
+
     @Override
     public boolean validateInput(Customer newCustomer) {
         if(newCustomer == null) return false;
