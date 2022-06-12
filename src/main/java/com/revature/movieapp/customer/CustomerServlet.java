@@ -43,6 +43,12 @@ public class CustomerServlet {
         return new ResponseEntity<>(newCustomer, HttpStatus.CREATED);
     }
 
+    @DeleteMapping("/delete")
+    public ResponseEntity<String> deleteCustomer(@RequestBody @Valid Customer customer){
+        String output = customerServices.delete(customer);
+        return new ResponseEntity<>(output, HttpStatus.OK);
+    }
+
     // Read
     @GetMapping("/customer-findall")
     public List<Customer> getAllCustomers(){
