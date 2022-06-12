@@ -1,4 +1,4 @@
-package com.revature.movieapp.util.aspects;
+package com.revature.movieapp.util.exceptions.aspects;
 
 
 import com.revature.movieapp.util.exceptions.AuthenticationException;

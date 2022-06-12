@@ -1,4 +1,5 @@
 package com.revature.movieapp.order;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.revature.movieapp.customer.Customer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,20 +7,19 @@ import lombok.NoArgsConstructor;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.util.Objects;
 
 @Data // this handles toString, hashCode, equals() and your getters and setters
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 public class Order {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "order_id")
+    @Column(name="id")
     private int id;
-
     @Column(name = "movieID")
     private String movieID;
 
@@ -39,3 +39,5 @@ public class Order {
     private Customer customer;
 
 }
+
+

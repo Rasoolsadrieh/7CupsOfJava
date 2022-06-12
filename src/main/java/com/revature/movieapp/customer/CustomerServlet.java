@@ -53,7 +53,7 @@ public class CustomerServlet {
     @SecureEndpoint(allowedUsers = {"by@mail.com", "abczyx123@mail.com"}, isLoggedIn = true)
     public ResponseEntity<List> findAllCustomers(){
         // ResponseEntity takes an Object for the ResponseBody and an HTTP Status Code
-        return new ResponseEntity<>customerServices.readAll(), HttpStatus.I_AM_A_TEAPOT);
+        return new ResponseEntity<>(customerServices.readAll(), HttpStatus.I_AM_A_TEAPOT);
     }
 
     @GetMapping("/customerEx")

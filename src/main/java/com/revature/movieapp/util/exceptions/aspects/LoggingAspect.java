@@ -1,4 +1,4 @@
-package com.revature.movieapp.util.aspects;
+package com.revature.movieapp.util.exceptions.aspects;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
