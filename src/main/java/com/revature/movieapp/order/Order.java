@@ -24,19 +24,24 @@ public class Order {
     private String movieID;
 
     @Column(name = "order_type")
-    private int orderType;
+    private String orderType;
 
-    @Column(name = "is_Del")
-    private int isDel;
-
-    @Column(name = "is_Own")
-    private boolean isOwn;
     @Column(name = "order_date")
     private String orderDate;
+
+    @Column(name = "return_date")
+    private String returnDate;
+
+    @Column(name = "is_complete")
+    private int isComplete;
+
+    private int balance;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "email", referencedColumnName = "email")
     private Customer customer;
+
+
 
 }
 
