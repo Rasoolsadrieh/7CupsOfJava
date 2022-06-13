@@ -66,26 +66,13 @@ public class OrderServices implements Serviceable<Order> {
         return false;
     }
 
-    public Order rentMovie(int id, String movieID, String email) {
-        Optional<Order> persistedOrder = orderDao.rentMovie(id, movieID, email);
-        System.out.println(persistedOrder);
-        String orderDate = theDate;
-        return rentMovieOrderDate(orderDate, id);
-    }
-
-
-    public Order rentMovieOrderDate(String orderDate, int id){
-        Optional<Order> persistedOrder = orderDao.rentMovieOrderDate(orderDate, id);{
-            System.out.println(persistedOrder);
-            String returnDate = theReturnDate;
-            return rentMovieReturnDate(returnDate, id);
-        }
-    }
-
-    public Order rentMovieReturnDate(String returnDate, int id){
-        Optional<Order> persistedOrder = orderDao.rentMovieReturnDate(returnDate, id);
+    public Order rentMovie(int id, String movieID, String orderDate, String returnDate, String email) {
+        orderDate = theDate;
+        returnDate = theReturnDate;
+        Optional<Order> persistedOrder = orderDao.rentMovie(id, movieID, orderDate, returnDate, email);
         return persistedOrder.get();
     }
+
 
 
     public Order completeOrder(int id){
