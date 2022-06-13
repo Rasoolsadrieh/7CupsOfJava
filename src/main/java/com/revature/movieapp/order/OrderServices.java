@@ -63,8 +63,8 @@ public class OrderServices implements Serviceable<Order> {
         return persistedOrder.get();
     }
 
-    public Order completeOrder(int isComplete, int id){
-        Optional<Order> persistedOrder = orderDao.completeOrder(isComplete, id);
+    public Order completeOrder(int id){
+        Optional<Order> persistedOrder = orderDao.completeOrder(id);
         return persistedOrder.get();
     }
 
