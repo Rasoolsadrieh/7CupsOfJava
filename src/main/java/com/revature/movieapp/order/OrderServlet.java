@@ -10,7 +10,11 @@ import com.revature.movieapp.util.interfaces.Authable;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.ServletException;
@@ -33,5 +37,17 @@ public class OrderServlet {
     }
 
     // TODO: IMPLEMENT ME
+
+    @GetMapping("/rentmovie")
+    public ResponseEntity<Order> rentMovie(int id, String movieID, String orderDate, String returnDate){
+        Order rentedMovie = orderServices.rentMovie(id, movieID, orderDate, returnDate);
+        return new ResponseEntity<>(rentedMovie, HttpStatus.CREATED);
+    }
+
+    @GetMapping("/completeorder")
+    public ResponseEntity<Order> completeOrder(int id){
+        Order completedOrder = orderServices.completeOrder(id);
+        return new ResponseEntity<>(completedOrder, HttpStatus.ACCEPTED);
+    }
 
 }
