@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
+
 @Service
 @Transactional
 public class OrderServices implements Serviceable<Order> {
@@ -53,5 +55,10 @@ public class OrderServices implements Serviceable<Order> {
     @Override
     public boolean validateInput(Order object) {
         return false;
+    }
+
+    public Order rentMovie(int id, String movieID, String orderDate, String returnDate) {
+        Optional<Order> persistedOrder = orderDao.rentMovie(id, movieID, orderDate, returnDate);
+        return persistedOrder.get();
     }
 }
