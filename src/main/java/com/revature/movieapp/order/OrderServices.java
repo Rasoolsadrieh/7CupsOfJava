@@ -1,11 +1,16 @@
 package com.revature.movieapp.order;
 
 import com.revature.movieapp.creditcard.CreditCardDao;
+import com.revature.movieapp.customer.Customer;
 import com.revature.movieapp.util.interfaces.Serviceable;
 import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
@@ -53,11 +58,6 @@ public class OrderServices implements Serviceable<Order> {
         return false;
     }
 
-    @Override
-    public boolean validateInput(Order object) {
-        return false;
-    }
-
     public Order rentMovie(int id, String movieID, String orderDate, String returnDate, String email) {
         Optional<Order> persistedOrder = orderDao.rentMovie(id, movieID, orderDate, returnDate, email);
         return persistedOrder.get();
@@ -68,4 +68,15 @@ public class OrderServices implements Serviceable<Order> {
         return persistedOrder.get();
     }
 
+    public boolean validateInput(Order newOrder){
+        if(newOrder == null) {return false;}
+        if(newOrder.getId() <= 0) {return false;}
+        if(newOrder.getMovieID() == null || newOrder.getMovieID().trim().equals("")) {return false;}
+        if(newOrder.getOrderType() != "rent" && newOrder.getOrderType() != "owned") {return false;}
+        if(newOrder.getOrderDate() == null || newOrder.getOrderDate().trim().equals("")) {return false;}
+        if(newOrder.getReturnDate() == null || newOrder.getReturnDate().trim().equals("")) {return false;}
+        if(newOrder.getIsComplete() != 1 && newOrder.getIsComplete() != 0) {return false;}
+        if(newOrder.getBalance() <= 0) {return false;}
+        return true;
+    }
 }
