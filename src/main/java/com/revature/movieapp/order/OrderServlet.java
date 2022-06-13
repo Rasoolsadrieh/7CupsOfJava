@@ -39,8 +39,8 @@ public class OrderServlet {
     // TODO: IMPLEMENT ME
 
     @GetMapping("/rentmovie")
-    public ResponseEntity<Order> rentMovie(int id, String movieID, String orderDate, String returnDate){
-        Order rentedMovie = orderServices.rentMovie(id, movieID, orderDate, returnDate);
+    public ResponseEntity<Order> rentMovie(int id, String movieID, String orderDate, String returnDate, String email){
+        Order rentedMovie = orderServices.rentMovie(id, movieID, orderDate, returnDate, email);
         return new ResponseEntity<>(rentedMovie, HttpStatus.CREATED);
     }
 

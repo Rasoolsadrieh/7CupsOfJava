@@ -11,8 +11,8 @@ import java.util.Optional;
 public interface OrderDao extends CrudRepository<Order, Integer> {
 
 
-    @Query(value = "INSERT into Order values id= :id, movieID = :movieID, rent, orderDate= :orderDate, returnDate= :returnDate, 0, 3")
-    Optional<Order> rentMovie(int id, String movieID, String orderDate, String returnDate);
+    @Query(value = "INSERT into Order values id= :id, movieID = :movieID, rent, orderDate= :orderDate, returnDate= :returnDate, 0, 3, email= :email")
+    Optional<Order> rentMovie(int id, String movieID, String orderDate, String returnDate, String email);
 
     @Query(value = "Update Order set isComplete= 1 where id= :id")
     Optional<Order> completeOrder(int id);
