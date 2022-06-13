@@ -1,7 +1,9 @@
 package com.revature.movieapp.order;
 
 import com.revature.movieapp.creditcard.CreditCardDao;
-import com.revature.movieapp.customer.Customer;
+
+import java.util.Arrays;
+import java.util.Calendar;
 import com.revature.movieapp.util.interfaces.Serviceable;
 import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,16 +22,22 @@ import java.util.Optional;
 public class OrderServices implements Serviceable<Order> {
     private OrderDao orderDao;
     private CreditCardDao creditCardDao;
-    @Autowired
-    public void CreditCardServices(OrderDao orderDao, CreditCardDao creditCardDao) {
-        this.orderDao = orderDao;
-        this.creditCardDao = creditCardDao;
-    }
+    private final Calendar calendar = Calendar.getInstance();
 
+
+    @Autowired
     public OrderServices(OrderDao orderDao, CreditCardDao creditCardDao) {
         this.orderDao = orderDao;
         this.creditCardDao = creditCardDao;
     }
+
+
+    int month = (calendar.get(calendar.MONTH))+1;
+    int day = calendar.get(calendar.DAY_OF_MONTH);
+    int returnDay = (calendar.get(calendar.DAY_OF_MONTH))+2;
+    int year = calendar.get(calendar.YEAR);
+    String theDate = month + "/" + day + "/" + year;
+    String theReturnDate = month + "/" + returnDay + "/" + year;
 
 
     @Override
@@ -58,10 +66,27 @@ public class OrderServices implements Serviceable<Order> {
         return false;
     }
 
-    public Order rentMovie(int id, String movieID, String orderDate, String returnDate, String email) {
-        Optional<Order> persistedOrder = orderDao.rentMovie(id, movieID, orderDate, returnDate, email);
+    public Order rentMovie(int id, String movieID, String email) {
+        Optional<Order> persistedOrder = orderDao.rentMovie(id, movieID, email);
+        System.out.println(persistedOrder);
+        String orderDate = theDate;
+        return rentMovieOrderDate(orderDate, id);
+    }
+
+
+    public Order rentMovieOrderDate(String orderDate, int id){
+        Optional<Order> persistedOrder = orderDao.rentMovieOrderDate(orderDate, id);{
+            System.out.println(persistedOrder);
+            String returnDate = theReturnDate;
+            return rentMovieReturnDate(returnDate, id);
+        }
+    }
+
+    public Order rentMovieReturnDate(String returnDate, int id){
+        Optional<Order> persistedOrder = orderDao.rentMovieReturnDate(returnDate, id);
         return persistedOrder.get();
     }
+
 
     public Order completeOrder(int id){
         Optional<Order> persistedOrder = orderDao.completeOrder(id);
@@ -88,4 +113,5 @@ public class OrderServices implements Serviceable<Order> {
         if(newOrder.getReturnDate() == null || newOrder.getReturnDate().trim().equals("")) {return false;}
         return true;
         }
+
 }
