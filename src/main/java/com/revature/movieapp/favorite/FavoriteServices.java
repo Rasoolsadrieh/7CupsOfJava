@@ -57,7 +57,9 @@ public class FavoriteServices implements Serviceable<Favorite> {
     }
 
     @Override
-    public boolean validateInput(Favorite object) {
-        return false;
+    public boolean validateInput(Favorite favoriteMovie) {
+        if(favoriteMovie == null) {return false;}
+        if (favoriteMovie.getMovieID() == null || favoriteMovie.getMovieID().trim().equals("")) {return false;}
+        return true;
     }
 }

@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29b76a54-7c41-45ab-a42b-a0c4d2edf552" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/favorite/FavoriteServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/favorite/FavoriteServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

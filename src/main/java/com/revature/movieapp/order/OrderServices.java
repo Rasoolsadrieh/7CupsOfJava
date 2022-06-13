@@ -79,4 +79,13 @@ public class OrderServices implements Serviceable<Order> {
         if(newOrder.getBalance() <= 0) {return false;}
         return true;
     }
+
+    public boolean validateCustomMovieTransactionInput(Order newOrder){
+        if(newOrder == null) {return false;}
+        if(newOrder.getId() <= 0) {return false;}
+        if(newOrder.getMovieID() == null || newOrder.getMovieID().trim().equals("")) {return false;}
+        if(newOrder.getOrderDate() == null || newOrder.getOrderDate().trim().equals("")) {return false;}
+        if(newOrder.getReturnDate() == null || newOrder.getReturnDate().trim().equals("")) {return false;}
+        return true;
+        }
 }
