@@ -2,6 +2,7 @@ package com.revature.movieapp.order;
 
 import com.revature.movieapp.creditcard.CreditCardDao;
 import com.revature.movieapp.util.interfaces.Serviceable;
+import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -61,4 +62,10 @@ public class OrderServices implements Serviceable<Order> {
         Optional<Order> persistedOrder = orderDao.rentMovie(id, movieID, orderDate, returnDate);
         return persistedOrder.get();
     }
+
+    public Order completeOrder(int isComplete, int id){
+        Optional<Order> persistedOrder = orderDao.completeOrder(isComplete, id);
+        return persistedOrder.get();
+    }
+
 }
