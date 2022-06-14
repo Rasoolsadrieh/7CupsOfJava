@@ -12,10 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -38,13 +35,13 @@ public class OrderServlet {
 
     // TODO: IMPLEMENT ME
 
-    @GetMapping("/rentmovie")
+    @PostMapping("/rentmovie")
     public ResponseEntity<Order> rentMovie(int id, String movieID, String orderDate, String returnDate, String email){
         Order rentedMovie = orderServices.rentMovie(id, movieID, orderDate, returnDate, email);
         return new ResponseEntity<>(rentedMovie, HttpStatus.CREATED);
     }
 
-    @GetMapping("/completeorder")
+    @PutMapping("/completeorder")
     public ResponseEntity<Order> completeOrder(int id){
         Order completedOrder = orderServices.completeOrder(id);
         return new ResponseEntity<>(completedOrder, HttpStatus.ACCEPTED);

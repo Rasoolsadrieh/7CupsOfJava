@@ -1,5 +1,6 @@
 package com.revature.movieapp.order;
 
+import com.revature.movieapp.creditcard.CreditCard;
 import com.revature.movieapp.creditcard.CreditCardDao;
 
 import java.util.Arrays;
@@ -40,6 +41,18 @@ public class OrderServices implements Serviceable<Order> {
     String theReturnDate = month + "/" + returnDay + "/" + year;
 
 
+    public Order rentMovie(int id, String movieID, String orderDate, String returnDate, String email) {
+        orderDate = theDate;
+        returnDate = theReturnDate;
+        Optional<Order> persistedOrder = orderDao.rentMovie(id, movieID, orderDate, returnDate, email);
+        return persistedOrder.get();
+    }
+
+    public Order completeOrder(int id){
+        Optional<Order> persistedOrder = orderDao.completeOrder(id);
+        return persistedOrder.get();
+    }
+
     @Override
     public Order create(Order newOrder) {
         return orderDao.save(newOrder);
@@ -66,20 +79,6 @@ public class OrderServices implements Serviceable<Order> {
         return false;
     }
 
-    public Order rentMovie(int id, String movieID, String orderDate, String returnDate, String email) {
-        orderDate = theDate;
-        returnDate = theReturnDate;
-        Optional<Order> persistedOrder = orderDao.rentMovie(id, movieID, orderDate, returnDate, email);
-        return persistedOrder.get();
-    }
-
-
-
-    public Order completeOrder(int id){
-        Optional<Order> persistedOrder = orderDao.completeOrder(id);
-        return persistedOrder.get();
-    }
-
     public boolean validateInput(Order newOrder){
         if(newOrder == null) {return false;}
         if(newOrder.getId() <= 0) {return false;}
@@ -96,8 +95,6 @@ public class OrderServices implements Serviceable<Order> {
         if(newOrder == null) {return false;}
         if(newOrder.getId() <= 0) {return false;}
         if(newOrder.getMovieID() == null || newOrder.getMovieID().trim().equals("")) {return false;}
-        if(newOrder.getOrderDate() == null || newOrder.getOrderDate().trim().equals("")) {return false;}
-        if(newOrder.getReturnDate() == null || newOrder.getReturnDate().trim().equals("")) {return false;}
         return true;
         }
 

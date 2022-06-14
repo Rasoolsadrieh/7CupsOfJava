@@ -1,5 +1,6 @@
 package com.revature.movieapp.order;
 
+import com.revature.movieapp.creditcard.CreditCard;
 import com.revature.movieapp.order.Order;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -19,3 +20,5 @@ public interface OrderDao extends CrudRepository<Order, Integer> {
 
 
 }
+
+

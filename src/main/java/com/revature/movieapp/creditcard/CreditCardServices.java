@@ -2,6 +2,7 @@ package com.revature.movieapp.creditcard;
 import com.revature.movieapp.creditcard.CreditCard;
 import com.revature.movieapp.customer.Customer;
 import com.revature.movieapp.customer.CustomerDao;
+import com.revature.movieapp.order.Order;
 import com.revature.movieapp.util.interfaces.Serviceable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 import javax.persistence.*;
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -45,6 +47,15 @@ public class CreditCardServices implements Serviceable<CreditCard> {
     public boolean delete(String id) {
         return false;
     }
+
+    public CreditCard orderPayment(String cc_number){
+        Optional<CreditCard> payment = creditCardDao.completePayment(cc_number);
+        System.out.println(payment);
+        return completePayment(cc_number);
+    }
+
+    public CreditCard completePayment(String cc_number) {return creditCardDao.findById(cc_number).get();}
+
 
     @Override
     public boolean validateInput(CreditCard newCreditCard) {
