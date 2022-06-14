@@ -33,7 +33,7 @@ public class OrderServices implements Serviceable<Order> {
     @Override
     public Order readById(String orderEmail) {return null;}
 
-    public Order readByEmail(String orderEmail) {return orderDao.orderHistory(orderEmail).get();}
+    public List<Order> readByEmail(Customer orderEmail) {return  orderDao.orderHistory(orderEmail);}
 
     @Override
     public boolean delete(String orderEmail) {return false;}

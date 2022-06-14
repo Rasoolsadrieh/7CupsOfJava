@@ -39,6 +39,14 @@ public class OrderServlet {
         Order persistedOrder = orderServices.create(newOrder);
         return new ResponseEntity<>(persistedOrder, HttpStatus.CREATED);
     }
+
+    @GetMapping ("/order/{email}")
+    public ResponseEntity<List<Order>> getOrder(@PathVariable String email){
+
+        Customer customer = customerServices.readById(email);
+        List<Order>  orders = orderServices.readByEmail(customer);
+        return new ResponseEntity<>(orders, HttpStatus.CREATED);
+    }
 //
 //    @GetMapping("/orders/history")
 //    public ResponseEntity<Order> findOrderByEmail(@RequestBody Customer orderEmail) {
@@ -48,6 +56,8 @@ public class OrderServlet {
 //          return new ResponseEntity<>(foundOrder, HttpStatus.ACCEPTED);
 //    }
     // need to figure out how to implement find all orders by email
+
+
     @GetMapping("/ordersfa")
     public List<Order> getAllOrders(){return orderServices.readAll();}
 }
