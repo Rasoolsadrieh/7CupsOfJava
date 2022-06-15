@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="29b76a54-7c41-45ab-a42b-a0c4d2edf552" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poke_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/poke_project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,8 +188,8 @@
     <list>
       <item itemvalue="Application.com.revature.movieapp.MovieappProjectApplication" />
       <item itemvalue="JUnit.CustomerServiceTestSuite" />
-      <item itemvalue="JUnit.HibernateUtilTestSuite.test_getSession_givenProvidedCredentials_returnValidConnection" />
       <item itemvalue="JUnit.HibernateUtilTestSuite" />
+      <item itemvalue="JUnit.HibernateUtilTestSuite.test_getSession_givenProvidedCredentials_returnValidConnection" />
       <item itemvalue="Maven.Movieapp[clean,package...]" />
     </list>
     <recent_temporary>
