@@ -9,6 +9,7 @@ import com.revature.movieapp.util.interfaces.Authable;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,16 +36,39 @@ public class OrderServlet {
 
     // TODO: IMPLEMENT ME
 
-    @PostMapping("/rentmovie")
-    public ResponseEntity<Order> rentMovie(int id, String movieID, String orderDate, String returnDate, String email){
-        Order rentedMovie = orderServices.rentMovie(id, movieID, orderDate, returnDate, email);
-        return new ResponseEntity<>(rentedMovie, HttpStatus.CREATED);
+//    @PostMapping("/rentmovie")
+//    public ResponseEntity<Order> rentMovie(int id, String movieID, String orderDate, String returnDate, String email){
+//        Order rentedMovie = orderServices.rentMovie(id, movieID, orderDate, returnDate, email);
+//        return new ResponseEntity<>(rentedMovie, HttpStatus.CREATED);
+//    }
+//
+//    @PutMapping("/completeorder")
+//    public ResponseEntity<Order> completeOrder(int id){
+//        Order completedOrder = orderServices.completeOrder(id);
+//        return new ResponseEntity<>(completedOrder, HttpStatus.ACCEPTED);
+//    }
+
+    @PutMapping("updateorder")
+    public ResponseEntity<Order> updateOrder(@RequestBody Order theOrder){
+        Order newOrder = orderServices.updateOrder(theOrder);
+        return new ResponseEntity<>(newOrder, HttpStatus.ACCEPTED);
     }
 
-    @PutMapping("/completeorder")
-    public ResponseEntity<Order> completeOrder(int id){
-        Order completedOrder = orderServices.completeOrder(id);
-        return new ResponseEntity<>(completedOrder, HttpStatus.ACCEPTED);
+//    @GetMapping("order")
+//    public Order findOrderByID(@RequestParam Integer id){
+//        Order foundOrder = orderServices.readById(id);
+//        return foundOrder;
+//    }
+
+    @GetMapping("/order/{id}")
+    public ResponseEntity<Order> findByID(@PathVariable Integer id){
+        Order foundOrder = orderServices.readById(id);
+        return new ResponseEntity<>(foundOrder, HttpStatus.OK);
+    }
+
+    @GetMapping("/orders-findall")
+    public List<Order> getAllOrders(){
+        return orderServices.readAll();
     }
 
 }

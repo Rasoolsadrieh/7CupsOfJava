@@ -2,7 +2,6 @@ package com.revature.movieapp.creditcard;
 import com.revature.movieapp.creditcard.CreditCard;
 import com.revature.movieapp.customer.Customer;
 import com.revature.movieapp.customer.CustomerDao;
-import com.revature.movieapp.order.Order;
 import com.revature.movieapp.util.interfaces.Serviceable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,7 +35,9 @@ public class CreditCardServices implements Serviceable<CreditCard> {
         return (List<CreditCard>) creditCardDao.findAll();}
 
     @Override
-    public CreditCard readById(String cc_number) {return creditCardDao.findById(cc_number).get();}
+    public CreditCard readById(String cc_number) {
+        return creditCardDao.findById(cc_number).get();
+    }
 
     @Override
     public CreditCard update(CreditCard updatedCreditCard) {
@@ -48,14 +49,15 @@ public class CreditCardServices implements Serviceable<CreditCard> {
         return false;
     }
 
-    public CreditCard orderPayment(String cc_number){
-        Optional<CreditCard> payment = creditCardDao.completePayment(cc_number);
-        System.out.println(payment);
-        return completePayment(cc_number);
-    }
+//    public CreditCard orderPayment(String cc_number){
+//        Optional<CreditCard> payment = creditCardDao.completePayment(cc_number);
+//        System.out.println(payment);
+//        return completedPayment(cc_number);
+//    }
+//
+//    public CreditCard completedPayment(String cc_number) {return creditCardDao.findById(cc_number).get();}
 
-    public CreditCard completePayment(String cc_number) {return creditCardDao.findById(cc_number).get();}
-
+    public CreditCard updatePayment(CreditCard updatedPayment){return creditCardDao.save(updatedPayment);}
 
     @Override
     public boolean validateInput(CreditCard newCreditCard) {

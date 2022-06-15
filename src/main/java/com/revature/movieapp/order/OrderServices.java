@@ -20,7 +20,7 @@ import java.util.Optional;
 
 @Service
 @Transactional
-public class OrderServices implements Serviceable<Order> {
+public class OrderServices {
     private OrderDao orderDao;
     private CreditCardDao creditCardDao;
     private final Calendar calendar = Calendar.getInstance();
@@ -33,48 +33,51 @@ public class OrderServices implements Serviceable<Order> {
     }
 
 
-    int month = (calendar.get(calendar.MONTH))+1;
-    int day = calendar.get(calendar.DAY_OF_MONTH);
-    int returnDay = (calendar.get(calendar.DAY_OF_MONTH))+2;
-    int year = calendar.get(calendar.YEAR);
-    String theDate = month + "/" + day + "/" + year;
-    String theReturnDate = month + "/" + returnDay + "/" + year;
+//    int month = (calendar.get(calendar.MONTH))+1;
+//    int day = calendar.get(calendar.DAY_OF_MONTH);
+//    int returnDay = (calendar.get(calendar.DAY_OF_MONTH))+2;
+//    int year = calendar.get(calendar.YEAR);
+//    String theDate = month + "/" + day + "/" + year;
+//    String theReturnDate = month + "/" + returnDay + "/" + year;
+//
+//
+//    public Order rentMovie(int id, String movieID, String orderDate, String returnDate, String email) {
+//        orderDate = theDate;
+//        returnDate = theReturnDate;
+//        Optional<Order> persistedOrder = orderDao.rentMovie(id, movieID, orderDate, returnDate, email);
+//        return persistedOrder.get();
+//    }
+//
+//    public Order completeOrder(int id){
+//        Optional<Order> persistedOrder = orderDao.completeOrder(id);
+//        return persistedOrder.get();
+//    }
 
-
-    public Order rentMovie(int id, String movieID, String orderDate, String returnDate, String email) {
-        orderDate = theDate;
-        returnDate = theReturnDate;
-        Optional<Order> persistedOrder = orderDao.rentMovie(id, movieID, orderDate, returnDate, email);
-        return persistedOrder.get();
+    public Order updateOrder(Order theOrder){
+        return orderDao.save(theOrder);
     }
 
-    public Order completeOrder(int id){
-        Optional<Order> persistedOrder = orderDao.completeOrder(id);
-        return persistedOrder.get();
-    }
 
-    @Override
     public Order create(Order newOrder) {
         return orderDao.save(newOrder);
     }
 
-    @Override
+
     public List<Order> readAll() {
         return (List<Order>) orderDao.findAll();
     }
 
-    @Override
-    public Order readById(String id) {
-        int idInt = Integer.parseInt(id);
-        return orderDao.findById(idInt).get();
+
+    public Order readById(Integer id) {
+        return orderDao.findById(id).get();
     }
 
-    @Override
+
     public Order update(Order updatedOrder) {
         return null;
     }
 
-    @Override
+
     public boolean delete(String id) {
         return false;
     }
