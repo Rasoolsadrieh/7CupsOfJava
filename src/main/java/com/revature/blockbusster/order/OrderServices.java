@@ -1,7 +1,5 @@
 package com.revature.blockbusster.order;
 
-
-import com.revature.blockbusster.customer.Customer;
 import com.revature.blockbusster.customer.CustomerDao;
 import com.revature.blockbusster.util.interfaces.Serviceable;
 import org.springframework.beans.factory.annotation.Autowired;

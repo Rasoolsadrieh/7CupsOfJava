@@ -12,6 +12,6 @@ import java.util.Optional;
 public interface OrderDao extends CrudRepository<Order, Integer> {
 
     @Query(value = "FROM Order WHERE orderEmail= :order_email")
-    Optional<Order> orderHistory(String  orderEmail);
+    Optional<Order> orderHistory(String orderEmail);
 
 }
