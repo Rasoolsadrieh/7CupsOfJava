@@ -34,6 +34,7 @@ public class OrderServlet {
         newOrder.setOrderDate(initOrder.getOrderDate());
         newOrder.setOwned(initOrder.isOwned());
         newOrder.setReturnDate(initOrder.getReturnDate());
+        newOrder.setBalance(initOrder.getBalance());
         newOrder.setOrderEmail(orderEmail);
 
         Order persistedOrder = orderServices.create(newOrder);

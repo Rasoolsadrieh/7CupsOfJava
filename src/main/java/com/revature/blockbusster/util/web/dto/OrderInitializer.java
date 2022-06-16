@@ -6,16 +6,19 @@ public class OrderInitializer {
     private String orderDate;
     private boolean isOwned;
     private String returnDate;
+
+    private int balance;
     private String orderEmail;
 
     public OrderInitializer() {
     }
 
-    public OrderInitializer(String movieId, String orderDate, boolean isOwned, String returnDate, String orderEmail) {
+    public OrderInitializer(String movieId, String orderDate, boolean isOwned, String returnDate, int balance, String orderEmail) {
         this.movieId = movieId;
         this.orderDate = orderDate;
         this.isOwned = isOwned;
         this.returnDate = returnDate;
+        this.balance = balance;
         this.orderEmail = orderEmail;
     }
 
@@ -49,6 +52,14 @@ public class OrderInitializer {
 
     public void setReturnDate(String returnDate) {
         this.returnDate = returnDate;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
     }
 
     public String getOrderEmail() {

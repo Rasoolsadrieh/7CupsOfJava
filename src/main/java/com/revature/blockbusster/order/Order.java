@@ -28,6 +28,8 @@ public class Order {
     private boolean isOwned;
     @Column(name = "return_date")
     private String returnDate;
+    @Column(name = "balance")
+    private int balance;
     @ManyToOne(optional = false)
    // @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "order_email", referencedColumnName = "email")
