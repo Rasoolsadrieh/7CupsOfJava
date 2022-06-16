@@ -71,4 +71,9 @@ public class OrderServlet {
         return orderServices.readAll();
     }
 
+    @PostMapping("createorder")
+    public ResponseEntity<Order> createOrder(@RequestBody Order newOrder){
+        Order generatedOrder = orderServices.create(newOrder);
+        return new ResponseEntity<>(generatedOrder, HttpStatus.ACCEPTED);
+    }
 }

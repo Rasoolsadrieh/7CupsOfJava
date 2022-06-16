@@ -5,48 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29b76a54-7c41-45ab-a42b-a0c4d2edf552" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_3_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_7_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poke_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/poke_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/creditcard/CreditCardServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/customer/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/customer/CustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/order/OrderServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/web/dto/FavoriteInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/web/dto/FavoriteInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/web/dto/LoginCreds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/web/dto/LoginCreds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/web/servlets/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/web/servlets/AuthServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/web/servlets/TestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/movieapp/util/web/servlets/TestServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/revature/CustomerServiceTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/revature/CustomerServiceTestSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/creditcard/CreditCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/movieapp/creditcard/CreditCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/creditcard/CreditCardServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/movieapp/creditcard/CreditCardServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/creditcard/CreditCardServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/movieapp/creditcard/CreditCardServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/customer/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/movieapp/customer/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/customer/CustomerServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/movieapp/customer/CustomerServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/customer/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/movieapp/customer/CustomerServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/favorite/Favorite.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/favorite/FavoriteDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/favorite/FavoriteServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/favorite/FavoriteServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/order/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/movieapp/order/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/order/OrderServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/movieapp/order/OrderServices.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/order/OrderServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/revature/movieapp/order/OrderServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/util/web/dto/FavoriteInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/util/web/dto/LoginCreds.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/util/web/servlets/AuthServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/movieapp/util/web/servlets/TestServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/revature/CustomerServiceTestSuite.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
