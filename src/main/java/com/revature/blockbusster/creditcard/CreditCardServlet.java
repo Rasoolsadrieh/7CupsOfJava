@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin
 public class CreditCardServlet {
@@ -54,6 +56,14 @@ public class CreditCardServlet {
 
         CreditCard persistedCreditCard = creditCardServices.update(newCreditCard);
         return new ResponseEntity<>(persistedCreditCard, HttpStatus.CREATED);
+    }
+
+    @GetMapping ("/creditcard/{email}")
+    public ResponseEntity<List<CreditCard>> getCreditCard(@PathVariable String email){
+
+        Customer customer = customerServices.readById(email);
+        List<CreditCard>  creditCards = creditCardServices.readByEmail(customer);
+        return new ResponseEntity<>(creditCards, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/deletecc/{ccNumber}")

@@ -1,10 +1,13 @@
 package com.revature.blockbusster.creditcard;
 
+import com.revature.blockbusster.customer.Customer;
 import com.revature.blockbusster.customer.CustomerDao;
 import com.revature.blockbusster.util.interfaces.Serviceable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional
@@ -30,6 +33,8 @@ public class CreditCardServices implements Serviceable<CreditCard> {
 
     @Override
     public CreditCard readById(String ccNumber) {return null;}
+
+    public List<CreditCard> readByEmail(Customer customerEmail) {return  creditCardDao.creditCardHistory(customerEmail);}
 
     @Override
     public boolean delete(String ccNumber) {
